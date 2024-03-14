@@ -1,5 +1,5 @@
 import express from 'express';
-
+import cors from 'cors';
 const app = express();
 
 // 임시 DB
@@ -31,7 +31,7 @@ let diaries = [
 ];
 
 app.use(express.json()); // req.body를 읽기 위함
-
+app.use(cors());
 // GET /diary or /diary?nickname:nickname
 app.get('/diary', (req, res, next) => {
   const nickname = req.query.nickname;
