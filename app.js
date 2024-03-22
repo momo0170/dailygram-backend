@@ -61,8 +61,8 @@ app.post('/diary', (req, res, next) => {
     createdAt: Date(),
     url,
   };
-  diaries = [...diaries, newDiary]; // 새로 만든 일기를 임시 DB에 추가
-  res.status(201).send('일기 생성 완료!');
+  diaries = [newDiary, ...diaries]; // 새로 만든 일기를 임시 DB에 추가
+  res.status(201).json(newDiary);
 });
 
 // PUT /diary/:id
