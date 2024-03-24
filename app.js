@@ -21,7 +21,28 @@ app.post('/sign-up', (req, res, next) => {
   // 새로운 사용자를 userStorage에 추가
   userStorage = [...userStorage, newUser];
   console.log(userStorage);
-  res.status(201).json(userStorage);
+  res.status(201).json({ users: userStorage, currentUser: newUser });
+});
+
+app.post('/sign-in', (req, res, next) => {
+  const { id, password } = req.body;
+  // userStorage에 해당 id와 password가 있는지 확인
+  const isIncludeId = userStorage.find((info) => info.id === id);
+
+  // 일치하는 id가 있다면 비밀번호가 같은지 확인
+  if (isIncludeId) {
+    const isMatchPassword = userStorage.find(
+      (info) => info.password === password
+    );
+    if (isMatchPassword) {
+      const loginedUser = userStorage.filter((item) => item.id === id);
+      return res
+        .status(201)
+        .json({ message: '로그인 성공!', user: loginedUser });
+    }
+    return res.status(401).json({ message: '비밀번호가 일치하지 않습니다.' });
+  }
+  res.status(401).json({ message: '가입되지 않은 사용자입니다.' });
 });
 
 // 모든 라우터가 처리가 안될 시
