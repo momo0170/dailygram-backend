@@ -3,26 +3,10 @@ let diaryList = [
   {
     id: '1',
     name: '창한',
-    nickname: '심심하네진짜로',
+    nickname: '홍길동',
     text: '새로운 텍스트를 적어봤어',
     createdAt: Date(),
-    url: 'https://plus.unsplash.com/premium_photo-1709143101238-ed5c82ada0fb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8',
-  },
-  {
-    id: '2',
-    name: '민성',
-    nickname: 'quiet',
-    text: '반가워',
-    createdAt: Date(),
-    url: 'https://images.unsplash.com/3/www.madebyvadim.com.jpg?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fCVFQiU4MiVBOCVFQyU4NCVCMXxlbnwwfHwwfHx8MA%3D%3D',
-  },
-  {
-    id: '3',
-    name: '창한',
-    nickname: '심심하네진짜로',
-    text: '이건 내 두번째 텍스트야',
-    createdAt: Date(),
-    url: 'https://plus.unsplash.com/premium_photo-1709143101238-ed5c82ada0fb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8',
+    url: 'https://images.unsplash.com/photo-1710942499889-71f233dae342?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8',
   },
 ];
 
